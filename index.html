@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- add title -->
+    <title>Malhar Barbhaya</title> 
+    <!-- connecting to css -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8432ef22a7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class ="container">
+            <nav>
+                <!-- add logo photo here -->
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemnu">
+                    <!-- all navigations added in website here -->
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#Portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul> 
+                <i class="fas fa-bars" onclick="openmenu()"></i>  
+            </nav>
+        <!-- add title and text on page-->
+        <div class="header-text">
+            <p>RL Reasearch Intern</p>
+            <!--<br>-puts a line break like \ n-->
+            <h1>Hi I'm <span>Malhar</span><br>Barbhaya From Canada</h1>
+        </div>
+        <!-- home page shit ends here-->
+    </div>
+    <!--about starts here-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <!--about description-->
+                    <p>Hey I am malhar. I am a reinforcment learning intern at University of Alberta doing research under professor Biao 
+                        I am in second year of my computer science degree. I have keen interest in machine learning, ai and autmated stuff. I also love creating beutiful front end work as well</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <!--skills's content-->
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing WeB/App interface</li>
+                            <li><span>Web Development</span><br>Web app dev</li>
+                            <li><span>App dev </span><br>Android ios app</li>
+                        </ul>
+                    </div>
+                    <!--experience's content-->
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2019-2020</span><br>UX UI DESIGN Training </li>
+                            <li><span>2020-2021</span><br>Worked as a web developer at a startup</li>
+                            <li><span>2021-2022</span><br>Team lad in android os </li>
+                        </ul>
+                    </div>
+                    <!--education's content-->
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022-27</span><br>Bechelor of Science in University of Alberta </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--portfolio starts here-->
+    <div id="Portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png">
+                    <div class="layer">
+                        <h3>Shedular</h3>
+                        <p>The website help schedulize the tasks which the user considers primary or fixed in their schedule, and secondary tasks which they want to complete but don't know when.</p>
+                        <!--project link here in href-->
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png">
+                    <div class="layer">
+                        <h3>Pong AI</h3>
+                        <p>The website help schedulize the tasks which the user considers primary or fixed in their schedule, and secondary tasks which they want to complete but don't know when.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png">
+                    <div class="layer">
+                        <h3>SQL</h3>
+                        <p>The website help schedulize the tasks which the user considers primary or fixed in their schedule, and secondary tasks which they want to complete but don't know when.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+
+    </div>
+
+    <!--contact starts here-->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p>malharbarbhaya0711@gmail.com</p>
+                    <p>+1 7803815626</p>
+                    <div class="social-icons">
+                        <!--social media links here-->
+                        <a href="https://www.linkedin.com/in/malhar-barbhaya-9233a6278/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="images/Malhar_Barbhaya_resume.pdf" download="" class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6"  placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © 2024 Malhar Barbhaya. All rights reserved.</p>
+        </div>
+    </div>
+
+<script>
+    function opentab(tabname){
+        var tablinks = document.querySelectorAll(".tab-links");
+        var tabcontents = document.querySelectorAll(".tab-contents");
+        
+        // Loop through all tab links and remove the active class
+        for (var i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active-link");
+        }
+        
+        // Loop through all tab contents and hide them
+        for (var i = 0; i < tabcontents.length; i++) {
+            tabcontents[i].classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+        // Add active class to the clicked tab link
+        document.querySelector(".tab-links[data-tab='" + tabname + "']").classList.add("active-link");
+        
+        // Show the corresponding tab content
+        document.querySelector("#" + tabname).classList.add("active-tab");
+    }
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemnu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+  
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyqZY04JyH3O9CpCCFk8N6C820vVTU3yKkudv5isqVui_JLweuYY4IPgzEE26uMQLwG/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = documents.getElementById('msg')
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message Sent Successsfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+
+</body>
+</html>
