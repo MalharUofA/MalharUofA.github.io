@@ -1,0 +1,404 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #080808;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    /* This is backroung image*/
+    background-image: url(images/malhar.jpg.HEIC);
+    background-size: cover;
+    background-position: center  ;
+    
+}
+.container{
+    /*to change the left and right margin space of whole website, orignal : 10px 10%*/
+    padding: 10px 10%;
+
+}
+/*add spacing between navigation and image in hoem page*/
+nav{
+    display: flex  ;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    display: flex;
+    font-size: 40px;
+    font-weight: 800;
+    color: #3d535f;
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+
+}
+/*I want to increase the size of dot */
+b {
+    font-size: 70px; /* Increase the size as desired */
+    color: #7f00ff;
+    margin-top: -20px; /* Adjust the margin to reposition the dot */
+}
+/* This code puts the navigation bar in one line- allignment of navigation bar */
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+/*colour of navigation bar content */
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+/* this code puts red line below the items on navigation bar */
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #7f00ff;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+} 
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;}
+.header-text h1{
+        font-size: 60px;
+        font-weight: 20px;
+        /*color: #3d535f;*/
+    }
+/* This code puts red colour on the word "Malhar Barbhaya" */
+.header-text h1 span {
+    /* Use linear gradient for text color */
+    background: linear-gradient(45deg, #7f00ff, pink);
+    /* Clip text to gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Transparent text to allow gradient to show through */
+    color: transparent;
+     /* Adjust font size as needed */
+    }
+/*about section begins : we are managing the allignment of images */
+#about{
+    /*padding-top: 40vh;
+    padding-bottom: vh;*/
+    padding: 80px 0;
+
+    color:#ababab;
+}
+/*about moved to right of the image from below*/
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+/*this gives color to about me written heard*/
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+.tab-titles{
+    display:flex;
+    margin: 20px 0 40px;
+}
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: linear-gradient(45deg, #7f00ff, pink); /* Apply the gradient */
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span {
+    background: linear-gradient(45deg, #7f00ff, pink); /* Apply the gradient to the text */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; /* For webkit browsers */
+    color: transparent;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none ;
+
+}
+.tab-contents.active-tab{
+    display: block;
+}
+/*porfolio section begins*/
+#Portfolio {
+    padding: 50px 0;
+}
+
+/*portfolio effects*/
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(45deg, #7f00ff, pink); /* Apply the gradient */
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3 {
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/*the link icon color and arrangement here*/
+.layer a {
+    margin-top: 20px;
+    color: #7f00ff; /* Apply the gradient */
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+/*effect of zoom in*/
+.work:hover img {
+    transform: scale(1.1);
+}
+
+/* gradient zoom effect */
+.work:hover .layer {
+    height: 100%;
+}
+
+/*see more button in my work section*/
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #7f00ff; /* Apply the gradient */
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background: linear-gradient(45deg, #7f00ff, pink); /* Apply the gradient */
+}
+
+/*contact section begins*/
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    margin-top: 30px;
+}
+
+.contact-left p i {
+    color: #7f00ff; /* Apply the gradient */
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s, color 0.5s; /* Added color transition */
+}
+
+.social-icons a:hover {
+    color: #7f00ff; /* Apply the gradient */
+    transform: translateY(-5px);
+}
+
+.btn.btn2 {
+    display: inline-block;
+    background: linear-gradient(45deg, #7f00ff, pink); /* Apply the gradient */
+    color: #fff; /* Text color */
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn2 {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/*css for mobile screen*/
+nav .fas {
+    display: none;
+}
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(images/phone-background.png);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size:16px;
+    }
+    .header-text h1{
+        font-size: 25px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    /*this code is for the navigation bar-side menu*/
+    nav ul{
+       background: #ff004f;
+       position: fixed;
+       top:0;
+       right: -200px;
+       width: 200px;
+       height: 100vh;
+       padding-top: 50px;
+       z-index: 2;
+       transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+}
+#msg{
+    color: #61b752;
+    margin-top:-40px;
+    display: block;
+}
