@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    overflow: hidden;
+    /* add background image*/
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f3f5f8;
+
+}
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    height: 80px;
+    line-height: 80px;
+    z-index: 111;
+
+}
+.logo{
+    display: flex;
+    font-size: 40px;
+    font-weight: 800;
+    color: #3d535f;
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+    /*keep logo on left of the scrreen such that no space is there on left*/
+    /* margin-left: 0; */
+    margin-left: -920px;
+
+}
+/* this gives color to dot- change to red accoridng to prev theme  */
+b{
+    font-size: 70px;
+    color: #7f00ff;
+}
+.navItems{
+    display:flex;
+}
+.navItems li{
+    list-style: none;
+    margin: 0 15px
+}
+.navItems li a{
+    text-decoration: none;
+    color: #3d535f;
+    font-size: 25px;
+    letter-spacing: 3px;
+    text-transform: capitalize;
+}
+/* color of nav bar when touched  */
+.navItems li:hover a,.links a:hover{
+    color: #7f00ff;
+}
+
+.links a{
+    font-size: 30px;
+    color: #3d535f;
+    /* margin: 25px 100px; */
+    margin-left: 20px; 
+}
+.wrapper{
+    display: flex;
+    width: 100%;
+    height: calc(100vh- 80px);
+    justify-content: center;
+    align-items: center; 
+    padding: 0 10%;
+    overflow: hidden;
+}
+.wrapper::before{
+    position: absolute;
+    content: '';
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    left: -15%;
+    top: 40%;
+    background: linear-gradient(45deg, #7f00ff, pink);
+    animation: object1 6s linear infinite;
+}
+.wrapper::after{
+    position: absolute;
+    content: '';
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    left: 35%;
+    top: 12%;
+    background: linear-gradient(45deg, #7f00ff, pink);
+    animation: object2 6s linear infinite;
+}
+@keyframes object1{
+    50%{
+        left: -13%;
+        top: 41%;
+
+    }
+}
+@keyframes object2{
+    50%{
+        left: 35%;
+        top: 10%;
+        
+    }
+}
+.cols{
+    width: 50%;
+
+}
+.cols0{
+    width: 80%;
+    z-index: 5;
+}
+.topline{
+    display: block;
+    position: relative;
+    font-size: 35px;
+    letter-spacing: 5px;
+    color: #3d535f;
+    margin-top: 100px;
+}
+/* underline after Hello color */
+.topline::after{
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: 45px;
+    bottom: 10px;
+    background-color: #7f00ff
+}
+
+h1{
+    display: inline-block;
+    font-size: 5.2em;
+    font-weight: 900;
+    color: #3d535f;
+    
+}
+
+.multiText{
+    color: #7f00ff;
+    text-transform: capitalize;
+}
+p{
+    display:block;
+    width: 90%;
+    font-size: 1.2em;
+    color: #3d535f;
+}
+.btns{
+    width: 100%;
+    position: relative;
+    left: 150px;
+}
+/* download cv and hire me shadow effect style */
+button{
+    outline:none;
+    border: none;
+    cursor: pointer;
+    font-size : 25px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #3d535f;
+    padding: 8px 14px; 
+    margin: 40px 5px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    box-shadow: 0 15px 10px rgba(0,0,0,0.4); 
+}
+/* download cv and hire me color style */
+button:hover{
+    background-color: #7f00ff;
+}
+.imgbox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.imgbox img{
+    position: relative;
+    height: 100%;
+    width: calc(130% - 80px);
+    top: -100px;
+    right: 50px;
+    animation: animateUser 4s linear infinite;
+}
+/*animation to move image */
+@keyframes animateUser{
+    50%{
+        right: 30px;
+        top: -90px;
+
+    }
+}
+.imgbox #splash{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-35deg);
+    width: 200%;
+    height: 120%;
+    filter: saturate(200%);
+    animation: animate 4s linear infinite;
+}
+@keyframes animate{
+    50%{
+        top: 49%;
+        left: 51%;
+        width: 155%;
+        }
+}
+@keyframes blurAnimation {
+    0% {
+        filter: blur(0px); /* Start with no blur */
+    }
+    100% {
+        filter: blur(10px); /* End with blur */
+    }
+}
+@keyframes fadeLogoIn {
+    0% {
+        opacity: 0; /* Start with logo hidden */
+    }
+    100% {
+        opacity: 1; /* Logo stays visible */
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .navItems {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+
+    .links a {
+        /*change position of links without changing position of logo*/
+
+        font-size: 70px; /* Adjust the font size for mobile view */
+        margin-left: 50px;
+        margin-right: -10px;
+
+    }
+    .logo{
+         /* Reset the position of the logo */
+        margin-left: -200px;
+        font-size: 70px;
+        color: #ff8e65;
+    }
+
+    .wrapper::before, .wrapper::after {
+        display: none /* Hide the animated objects in mobile view */
+    }
+
+    .cols0 {
+        width: 100%; /* Adjust the width of the first column in mobile view */
+    }
+
+    .topline {
+        font-size: 100px; /* Adjust the font size of the topline in mobile view */
+        /* bring the text to the middle part of the screen and not the top */
+        margin-top: 400px;
+
+    }
+
+    h1 {
+        font-size: 7em; /* Adjust the font size of the main heading in mobile view */
+        
+    }
+    .multiText{
+
+        color: white;
+        text-transform: capitalize;
+        }
+    p{
+        display:None;
+    }
+
+    .btns {
+        text-align: left; /* Center align the buttons in mobile view */
+        left: 0; /* Reset the position of the buttons */
+        margin-top: 20px; /* Add margin to separate buttons in mobile view */
+        font-size: 50px;
+        
+    }
+
+    button {
+        font-size: 20px; /* Adjust the font size of the buttons in mobile view */
+        padding: 8px 12px; /* Adjust the padding of the buttons in mobile view */
+        margin: 10px; /* Adjust the margin of the buttons in mobile view */
+    }
+
+    .imgbox img {
+        width: 100%; /* Adjust the width of the image in mobile view */
+        height: auto; /* Allow the height of the image to adjust proportionally */
+        top: 0; /* Reset the position of the image */
+        right: 0; /* Reset the position of the image */
+        transform: none; /* Reset any transformations applied to the image */
+        animation: none; /* Disable the animation of the image */
+        display:None;
+    }
+
+    .imgbox #splash {
+        display:none; /* Hide the splash image in mobile view */
+    } 
+    .container {
+        background-image: url('malhar_image_mobile-new.jpg');
+        background-size: cover; /* Adjust background image size */
+        background-repeat: no-repeat; /* Prevent background image from repeating */
+        background-position: center; /* Center the background image */
+        
+    }
+
+}

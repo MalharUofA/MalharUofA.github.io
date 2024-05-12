@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--font awesome link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="cover_style.css">
+
+
+    <title>Personal Portfolio Website </title>
+    <style>
+        /* Style for the div visible only on mobile devices */
+        .mobile-only {
+            display: none; /* Hide the div by default */
+        }
+
+        @media only screen and (max-width: 1000px) {
+            /* Show the div on devices with a maximum width of 600px (mobile devices) */
+            .mobile-only {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Separate div only visible on mobile -->
+    <div class="mobile-only">
+        <!-- <img src="malhar_image_mobile-new-final-vertical-chance.jpg"  class="card-img" alt=""> -->
+        <img src="arouraphoto.jpg"  class="card-img" alt="">
+        <div class="card-body">
+            <nav>
+                <div class="mobile_logo">Malhar<b>.</b></div>
+                <div class="mobile_links">
+                    <a href="https://www.linkedin.com/in/malhar-barbhaya-9233a6278/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/MalharUofA/Pong.AI"><i class="fab fa-github"></i></a>
+            </nav>
+            <div class="mobile_wrapper">   
+                <div class="mobile_cols mobile_cols0">
+                    <span class="mobile_topline">Hello</span>
+                    <h1>I'm <br><span class="multitext">Coder</span></h1>
+                    <p>Embark on a journey where innovation meets excellence. Discover how I transform theoretical knowledge into groundbreaking solutions at the intersection of computer science and technology. </p>
+                    <div class="mobile_btns">
+                        <a href="images/Malhar_Barbhaya_resume.pdf" target="_blank"><button>View CV</button></a>
+                        <a href="index_website.html"><button>Know More</button></a>
+                    </div>
+                </div>
+                <div class="mobile_cols mobile_cols1">
+                </div>  
+            </div>
+        </div>  
+    </div>
+
+    <div class="container">
+
+        <nav>
+
+            <div class="logo">Malhar<b>.</b></div>
+            <!-- <ul class="navItems">
+                <li><a href="index_website.html#header">Home</a></li>
+                <li><a href="index_website.html#about">About</a></li>
+                <li><a href="index_website.html#Portfolio">Projects</a></li>
+                <li><a href="index_website.html#contact">Contact Me</a></li>
+            </ul> -->
+            <div class="links">
+                <a href="https://www.linkedin.com/in/malhar-barbhaya-9233a6278/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/MalharUofA/Pong.AI"><i class="fab fa-github"></i></a>
+        </nav>
+
+        <div class="wrapper">
+            <div class="cols cols0">
+                <span class="topline">Hello</span>
+                <h1>I'm <br><span class="multiText">Coder</span></h1>
+                <p>Embark on a journey where innovation meets excellence. Discover how I transform theoretical knowledge into groundbreaking solutions at the intersection of computer science and technology. </p>
+                <div class="btns">
+                    <a href="images/Malhar_Barbhaya_resume.pdf" target="_blank"><button>View CV</button></a>
+                    <a href="index_website.html"><button>Know More</button></a>
+                </div>
+            </div>
+            <div class="cols cols1">
+                <div class="imgbox">
+                    <img src="coverpage images/final-fotor-bg-remover-20240203204538.png" id="splash">  
+                    <img src="coverpage images/image_rn.png" >
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typingEffect = new Typed(".multiText", {
+            strings: ["Coder", "Developer", "Student", "Researcher"],
+            loop: true,
+            typeSpeed: 100,
+            backSpeed: 80,
+            backDelay: 1500,
+            
+        })
+        // Duplicate typing effect initialization for mobile view
+        var mobileTypingEffect = new Typed(".multitext", {
+            strings: ["Coder", "Developer", "Student", "Researcher"],
+            loop: true,
+            typeSpeed: 100,
+            backSpeed: 80,
+            backDelay: 1500,
+        });
+    </script>
+    
+
+</body>
+</html>
